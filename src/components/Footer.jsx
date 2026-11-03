@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { Tooltip } from "./Tooltip";
+
+const COOKIE_POLICY_TEXT =
+  "We use cookies and local storage to keep you signed in and remember your preferences, such as saved jobs and theme. No data is shared with third parties.";
 
 const Footer = () => {
   return (
@@ -149,10 +153,15 @@ const Footer = () => {
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Cookie Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <Tooltip content={COOKIE_POLICY_TEXT}>
+                <button
+                  type="button"
+                  className="group relative cursor-default hover:text-white focus:outline-none focus-visible:text-white transition-colors duration-300"
+                >
+                  <span className="relative z-10">Cookie Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
               <Link
                 to="/contact"
                 className="group relative hover:text-white transition-colors duration-300"
