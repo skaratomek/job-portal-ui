@@ -152,11 +152,6 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
               <Tooltip content={PRIVACY_POLICY_TEXT}>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Privacy Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
-              <Tooltip content={TERMS_OF_SERVICE_TEXT}>
                 <button
                   type="button"
                   className="group relative cursor-default hover:text-white focus:outline-none focus-visible:text-white transition-colors duration-300"
@@ -165,10 +160,11 @@ const Footer = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
                 </button>
               </Tooltip>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Terms of Service</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <Tooltip content={TERMS_OF_SERVICE_TEXT}>
+                <button
+                  type="button"
+                  className="group relative cursor-default hover:text-white focus:outline-none focus-visible:text-white transition-colors duration-300"
+                >
                   <span className="relative z-10">Terms of Service</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
                 </button>
