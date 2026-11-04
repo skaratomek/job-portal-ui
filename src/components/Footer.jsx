@@ -7,6 +7,9 @@ const TERMS_OF_SERVICE_TEXT =
 const COOKIE_POLICY_TEXT =
   "We use cookies and local storage to keep you signed in and remember your preferences, such as saved jobs and theme. No data is shared with third parties.";
 
+const PRIVACY_POLICY_TEXT =
+  "We only collect the information you provide, such as your profile and job applications, to power your experience. Your data stays in your browser and is never sold or shared with third parties.";
+
 const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
@@ -148,6 +151,7 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
+              <Tooltip content={PRIVACY_POLICY_TEXT}>
               <a className="group relative hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Privacy Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
@@ -157,6 +161,14 @@ const Footer = () => {
                   type="button"
                   className="group relative cursor-default hover:text-white focus:outline-none focus-visible:text-white transition-colors duration-300"
                 >
+                  <span className="relative z-10">Privacy Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
+              <a className="group relative hover:text-white transition-colors duration-300">
+                <span className="relative z-10">Terms of Service</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+              </a>
                   <span className="relative z-10">Terms of Service</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
                 </button>
